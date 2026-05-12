@@ -31,11 +31,16 @@ function Search() {
 
   const addcart = (product_id) => {
     const userSession = sessionStorage.getItem('mydata');
-    if (!userSession) {
-      alert('Please Login First...');
-      window.location = "/Login";
-      return;
-    }
+     if (!userSession) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Please Login First',
+                    text: 'You need to login to continue.',
+                }).then(() => {
+                    window.location = "/Login";
+                });
+                return;
+            }
     const user = JSON.parse(userSession);
 
     if (product_id) {
@@ -69,11 +74,16 @@ function Search() {
 
   const addwish = (product_id) => {
     const userSession = sessionStorage.getItem('mydata');
-    if (!userSession) {
-      alert('Please Login First...');
-      window.location = "/Login";
-      return;
-    }
+     if (!userSession) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Please Login First',
+                    text: 'You need to login to continue.',
+                }).then(() => {
+                    window.location = "/Login";
+                });
+                return;
+            }
     const user = JSON.parse(userSession);
 
     if (product_id) {
