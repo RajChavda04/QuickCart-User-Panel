@@ -65,24 +65,26 @@ const Register = () => {
             customer_email : customer_email,
             customer_password : customer_password,
             customer_phone : customer_phone
-            
-        }).then((response)=>{
-            if(response.data.message){
-                Swal.fire({
-                    title:'Success',
-                     text: response.data.message,
-                    icon:'success',
-                confirmButtonText:"OK" 
-            }).then(()=>{
-                window.location="/Login"
-            })
-        
-            }
-            else{
-                alert("inserted data");
-
-            }
         })
+        .then((response) => {
+            Swal.fire({
+                title: 'Success',
+                text: response.data.message,
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location = "/Login";
+            });
+        })
+        .catch((error) => {
+            const message = error?.response?.data?.message || 'Registration failed';
+            Swal.fire({
+                title: 'Error',
+                text: message,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        });
             //alert(response.data.message);
             
 
