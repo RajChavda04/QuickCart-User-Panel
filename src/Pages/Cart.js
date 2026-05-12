@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import { API_BASE_URL } from '../config/apiConfig'
 
 
 function Cart() {
@@ -19,7 +20,7 @@ function Cart() {
 
     useEffect(() => {
         if (!customerId) return;
-            Axios.post('http://localhost:1337/api/showcart', { customer_id: customerId })
+            Axios.post(`${API_BASE_URL}/showcart`, { customer_id: customerId })
                 .then((response) => {
                     setList(response.data);
                     calculateTotalPrice(response.data);
@@ -44,7 +45,7 @@ function Cart() {
         setList(updatedList);
 
         // Update quantity in the database
-        Axios.post('http://localhost:1337/api/updateQuantity', {
+        Axios.post(`${API_BASE_URL}/updateQuantity`, {
             product_id: product_id,
             customer_id: user.customer_id,
             quantity: updatedList[index].product_quantity,
@@ -65,7 +66,7 @@ function Cart() {
             setList(updatedList);
 
             // Update quantity in the database
-            Axios.post('http://localhost:1337/api/updateQuantity', {
+            Axios.post(`${API_BASE_URL}/updateQuantity`, {
                 product_id: product_id,
                 customer_id: user.customer_id,
                 quantity: updatedList[index].product_quantity,
@@ -92,7 +93,7 @@ function Cart() {
             cancelButtonText: "Cancel"
         }).then((result) => {
             if (result.isConfirmed) {
-                Axios.delete(`http://localhost:1337/api/cart_product_delete/${customer_id}/${product_id}`)
+                Axios.delete(`${API_BASE_URL}/cart_product_delete/${customer_id}/${product_id}`)
                     .then((response) => {
 
                         setList(prevList => prevList.filter(item => item.product_id !== product_id));

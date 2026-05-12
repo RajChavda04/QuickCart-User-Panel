@@ -3,6 +3,7 @@ import Axios from 'axios'
 import { useLocation } from 'react-router-dom';
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import { API_BASE_URL } from '../config/apiConfig'
 
 function Invoice() {
   const location = useLocation();
@@ -21,7 +22,7 @@ function Invoice() {
       return;
     }
 
-    Axios.get(`http://localhost:1337/api/invoice/${order_no}`)
+    Axios.get(`${API_BASE_URL}/invoice/${order_no}`)
       .then((response) => {
         setOrderDetails(response.data);
       })

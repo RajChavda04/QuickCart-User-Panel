@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import Swal from "sweetalert2";
 import Axois from "axios";
+import { API_BASE_URL } from '../config/apiConfig'
 
 const Register = () => {
    
@@ -58,7 +59,7 @@ const Register = () => {
         }
 
         
-        Axois.post("http://localhost:1337/api/userregister",{
+        Axois.post(`${API_BASE_URL}/userregister`,{
             customer_name: customer_name,
             customer_address: customer_address,
             customer_email : customer_email,

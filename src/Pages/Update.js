@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import Swal from "sweetalert2"
 import Axios from 'axios'
 import { useLocation } from 'react-router-dom';
+import { API_BASE_URL } from '../config/apiConfig'
 
  function Update() {
    
@@ -38,7 +39,7 @@ import { useLocation } from 'react-router-dom';
 
               
             
-              Axios.post('http://localhost:1337/api/customerdataupdate', formData,{
+              Axios.post(`${API_BASE_URL}/customerdataupdate`, formData,{
             
               }).then(() => {
                 Swal.fire({
@@ -61,7 +62,7 @@ import { useLocation } from 'react-router-dom';
             useEffect(() => {
                 if (customer_id) {
         
-                    Axios.post('http://localhost:1337/api/usercheckout', { customer_id: customer_id })
+                    Axios.post(`${API_BASE_URL}/usercheckout`, { customer_id: customer_id })
                         .then((response) => {
                             setcustomerdata(response.data[0]);
                            

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from '../config/apiConfig'
 
 
 function Navbar() {
@@ -21,7 +22,7 @@ const handleSearch = (e) => {
 
 
   useEffect(() => {
-    Axios.get('http://localhost:1337/api/getcategory')
+    Axios.get(`${API_BASE_URL}/getcategory`)
       .then((response) => {
         //console.log("API Response:", response.data); // Debugging step
 

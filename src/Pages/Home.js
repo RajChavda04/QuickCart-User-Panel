@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Axois from 'axios'
+import { API_BASE_URL } from '../config/apiConfig'
 
 
 
@@ -12,7 +13,7 @@ function Home() {
     const [list, setList] = useState([]);
     
     useEffect(() => {
-        Axois.get('http://localhost:1337/api/categorylist')
+        Axois.get(`${API_BASE_URL}/categorylist`)
             .then((response) => {
                 setList(response.data);
             });
@@ -30,7 +31,7 @@ function Home() {
     useEffect(() => {
 
         const fetchSummary = () => {
-            Axois.get('http://localhost:1337/api/admin/summary')
+            Axois.get(`${API_BASE_URL}/admin/summary`)
                 .then((res) => {
                     setSummary(res.data);
                 })

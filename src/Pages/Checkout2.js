@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
 import Swal from 'sweetalert2'
+import { API_BASE_URL } from '../config/apiConfig'
 
  function Checkout2() {
     const [list, setList] = useState([]);
@@ -90,7 +91,7 @@ import Swal from 'sweetalert2'
     }
     useEffect(() => {
         if (!customerId) return;
-            Axios.post('http://localhost:1337/api/usercheckout', { customer_id: customerId })
+            Axios.post(`${API_BASE_URL}/usercheckout`, { customer_id: customerId })
                 .then((response) => {
                     setList(response.data);
                 })
@@ -103,7 +104,7 @@ import Swal from 'sweetalert2'
 
     useEffect(() => {
         if (!customerId) return;
-            Axios.post('http://localhost:1337/api/showcheckout', { customer_id: customerId })
+            Axios.post(`${API_BASE_URL}/showcheckout`, { customer_id: customerId })
                 .then((response) => {
                     setList1(response.data);
                     calculateTotalPrice(response.data);
@@ -229,7 +230,7 @@ import Swal from 'sweetalert2'
                     payment_method: payment_method,
                 };
 
-                Axios.post('http://localhost:1337/api/pay', data)
+                Axios.post(`${API_BASE_URL}/pay`, data)
                     .then((res) => {
                         // alert('payment successfully');
                         Swal.fire({
@@ -282,7 +283,7 @@ import Swal from 'sweetalert2'
             payment_method,
         };
 
-        Axios.post('http://localhost:1337/api/pay', data)
+        Axios.post(`${API_BASE_URL}/pay`, data)
             .then((res) => {
                 Swal.fire({
                     icon: 'success',

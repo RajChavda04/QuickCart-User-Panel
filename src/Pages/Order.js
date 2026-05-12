@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Axios from 'axios';
 import {Link} from 'react-router-dom'
+import { API_BASE_URL } from '../config/apiConfig'
 
 
 
@@ -17,12 +18,12 @@ function Cart() {
     // const product_id = location.state?.product_id;
     useEffect(() => {
         if (!customerId) return;
-          Axios.get("http://localhost:1337/api/latestorder", {
+          Axios.get(`${API_BASE_URL}/latestorder`, {
             params: { customer_id: customerId }
           })
             .then((res) => {
               const orderNo = res.data.order_no;
-              return Axios.get(`http://localhost:1337/api/orderdetail/${orderNo}`, {
+              return Axios.get(`${API_BASE_URL}/orderdetail/${orderNo}`, {
                 params: { customer_id: customerId }
               });
             })

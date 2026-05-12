@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import { API_BASE_URL } from '../config/apiConfig'
 
 function Productdetails() {
     const [list, setList] = useState([]);
@@ -26,7 +27,7 @@ function Productdetails() {
         }
         const currentDate = new Date().toISOString().split('T')[0];
 
-        Axios.post("http://localhost:1337/api/feedback", {
+        Axios.post(`${API_BASE_URL}/feedback`, {
             customer_name,
             rating,
             feed_message,
@@ -74,7 +75,7 @@ function Productdetails() {
         const user = JSON.parse(userSession);
 
         if (product_id) {
-            Axios.post('http://localhost:1337/api/cartadd', { product_id: product_id, customer_id: user.customer_id, quantity: selectedQuantity })
+            Axios.post(`${API_BASE_URL}/cartadd`, { product_id: product_id, customer_id: user.customer_id, quantity: selectedQuantity })
                 .then((response) => {
                     if (response.data.message) {
                         // Update local storage for cart items
@@ -120,7 +121,7 @@ function Productdetails() {
         const user = JSON.parse(userSession);
 
         if (product_id) {
-            Axios.post('http://localhost:1337/api/cartadd', { product_id: product_id, customer_id: user.customer_id })
+            Axios.post(`${API_BASE_URL}/cartadd`, { product_id: product_id, customer_id: user.customer_id })
                 .then((response) => {
                     if (response.data.message) {
                         // Update local storage for cart items
@@ -147,7 +148,7 @@ function Productdetails() {
 
     useEffect(() => {
         if (product_id) {
-            Axios.post('http://localhost:1337/api/singleproduct', { product_id })
+            Axios.post(`${API_BASE_URL}/singleproduct`, { product_id })
                 .then((response) => {
                     setList(response.data);
                 })
@@ -159,7 +160,7 @@ function Productdetails() {
 
     // for feedback
     useEffect(() => {
-        Axios.get('http://localhost:1337/api/feedbacklist')
+        Axios.get(`${API_BASE_URL}/feedbacklist`)
             .then((response) => {
                 setList2(response.data);
             });
@@ -174,7 +175,7 @@ function Productdetails() {
     useEffect(() => {
 
         const fetchSummary = () => {
-            Axios.get('http://localhost:1337/api/admin/summary')
+            Axios.get(`${API_BASE_URL}/admin/summary`)
                 .then((res) => {
                     setSummary(res.data);
                 })

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
+import { API_BASE_URL } from '../config/apiConfig'
 // import Swal from 'sweetalert2'
 // import { useLocation } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ function Userprofile() {
 
     useEffect(() => {
         if (user) {
-            Axios.post('http://localhost:1337/api/usercheckout', { customer_id: user.customer_id })
+            Axios.post(`${API_BASE_URL}/usercheckout`, { customer_id: user.customer_id })
                 .then((response) => {
 
                     setList(response.data);

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Swal from "sweetalert2";
 import Axios from "axios"
+import { API_BASE_URL } from '../config/apiConfig'
 
 const Login = () => {
    
@@ -18,7 +19,7 @@ const Login = () => {
            });
            return;
         }
-        Axios.post("http://localhost:1337/api/userloginprocess", {
+        Axios.post(`${API_BASE_URL}/userloginprocess`, {
            customer_email: customer_email,
            customer_password: customer_password
   

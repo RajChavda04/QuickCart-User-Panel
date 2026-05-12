@@ -1,6 +1,7 @@
 import React from 'react'
 import Swal from 'sweetalert2';
 import Axios from "axios";
+import { API_BASE_URL } from '../config/apiConfig'
 
  function Changepass() {
 
@@ -24,7 +25,7 @@ import Axios from "axios";
          });
          return;
       }
-      Axios.post("http://localhost:1337/api/passchangeuser", {
+      Axios.post(`${API_BASE_URL}/passchangeuser`, {
          customer_email: parsedata.customer_email,
          current_password: current_password,
          new_password: new_password,

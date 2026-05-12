@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Axios from 'axios'
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2'
+import { API_BASE_URL } from '../config/apiConfig'
 
 export default function Wish() {
 
@@ -13,7 +14,7 @@ export default function Wish() {
 
     useEffect(() => {
         if (!customerId) return;
-            Axios.post('http://localhost:1337/api/showwish', { customer_id: customerId })
+            Axios.post(`${API_BASE_URL}/showwish`, { customer_id: customerId })
                 .then((response) => {
                     setList(response.data);
                 })
@@ -32,7 +33,7 @@ export default function Wish() {
         const user = JSON.parse(userSession);
     
         if (product_id) {
-            Axios.post('http://localhost:1337/api/cartaddwish', { product_id: product_id, customer_id: user.customer_id, fromWishlist: true })
+            Axios.post(`${API_BASE_URL}/cartaddwish`, { product_id: product_id, customer_id: user.customer_id, fromWishlist: true })
                 .then((response) => {
                     if (response.data.message) {
                         // Update local storage for cart items
@@ -73,7 +74,7 @@ export default function Wish() {
             cancelButtonText: "Cancel"
         }).then((result) => {
             if (result.isConfirmed) {
-                Axios.delete(`http://localhost:1337/api/wish_product_delete/${customer_id}/${product_id}`)
+                Axios.delete(`${API_BASE_URL}/wish_product_delete/${customer_id}/${product_id}`)
                     .then((response) => {
 
                         setList(prevList => prevList.filter(item => item.product_id !== product_id));

@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Swal from "sweetalert2"
+import { API_BASE_URL } from '../config/apiConfig'
 
 function Shopgrid() {
 
@@ -16,7 +17,7 @@ function Shopgrid() {
 
     useEffect(() => {
         if (category_id) {
-            Axios.post('http://localhost:1337/api/productlistdata', { category_id })
+            Axios.post(`${API_BASE_URL}/productlistdata`, { category_id })
                 .then((response) => {
                     setList(response.data);
                 })
@@ -42,7 +43,7 @@ function Shopgrid() {
         const user = JSON.parse(userSession);
     
         if (product_id) {
-            Axios.post('http://localhost:1337/api/cartadd', { product_id: product_id, customer_id: user.customer_id })
+            Axios.post(`${API_BASE_URL}/cartadd`, { product_id: product_id, customer_id: user.customer_id })
                 .then((response) => {
                     if (response.data.message) {
                         // Update local storage for cart items
@@ -80,7 +81,7 @@ function Shopgrid() {
         const user = JSON.parse(userSession);
     
         if (product_id) {
-            Axios.post('http://localhost:1337/api/wishadd', { product_id: product_id, customer_id: user.customer_id })
+            Axios.post(`${API_BASE_URL}/wishadd`, { product_id: product_id, customer_id: user.customer_id })
                 .then((response) => {
                     if (response.data.message) {
                         // Update local storage for cart items
@@ -110,7 +111,7 @@ function Shopgrid() {
 
     
     useEffect(() => {
-        Axios.get('http://localhost:1337/api/getcategory')
+        Axios.get(`${API_BASE_URL}/getcategory`)
           .then((response) => {
             //console.log("API Response:", response.data); // Debugging step
     

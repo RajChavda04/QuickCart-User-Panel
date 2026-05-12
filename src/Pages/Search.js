@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import Axios from 'axios';
 import Swal from 'sweetalert2';
-
 import { useLocation } from "react-router-dom";
+import { API_BASE_URL } from '../config/apiConfig'
 
 
 function Search() {
@@ -16,7 +16,7 @@ function Search() {
   const query = queryParams.get("query") || "";
 
   useEffect(() => {
-    Axios.get("http://localhost:1337/api/searchproductlist").then((response) => {
+    Axios.get(`${API_BASE_URL}/searchproductlist`).then((response) => {
       setList(response.data);
     });
   }, []);
@@ -39,7 +39,7 @@ function Search() {
     const user = JSON.parse(userSession);
 
     if (product_id) {
-      Axios.post('http://localhost:1337/api/cartadd', { product_id: product_id, customer_id: user.customer_id })
+      Axios.post(`${API_BASE_URL}/cartadd`, { product_id: product_id, customer_id: user.customer_id })
         .then((response) => {
           if (response.data.message) {
             // Update local storage for cart items
@@ -77,7 +77,7 @@ function Search() {
     const user = JSON.parse(userSession);
 
     if (product_id) {
-      Axios.post('http://localhost:1337/api/wishadd', { product_id: product_id, customer_id: user.customer_id })
+      Axios.post(`${API_BASE_URL}/wishadd`, { product_id: product_id, customer_id: user.customer_id })
         .then((response) => {
           if (response.data.message) {
             // Update local storage for cart items
