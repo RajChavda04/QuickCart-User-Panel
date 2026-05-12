@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
 import {Link} from "react-router-dom"
 import Swal from 'sweetalert2'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
  function Shope() {
     const [list, setList] = useState([]);
@@ -135,7 +135,7 @@ import { API_BASE_URL } from '../config/apiConfig'
                             <div class="shop-thumb">
                                 <div class="overlay"></div>
                                 {/* <img src="assets/img/shop/shop-1.png" alt="shop"/> */}
-                                <img src={`http://localhost:1337/${(val.product_image)}`} alt="shop"/>
+                                <img src={`${MEDIA_BASE_URL}/${(val.product_image)}`} alt="shop"/>
                                 <span class="sale">New</span>
                                 <ul class="shop-list">
                                     <li><Link to="/Shope" onClick={() => addcart(val.product_id)}><i class="fa-regular fa-cart-shopping"></i></Link></li>

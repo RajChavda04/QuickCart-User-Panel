@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Swal from "sweetalert2"
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
 function Shopgrid() {
 
@@ -212,7 +212,7 @@ function Shopgrid() {
                                                         <div className="shop-item">
                                                             <div className="shop-thumb">
                                                                 <div className="overlay"></div>
-                                                                <img src={`http://localhost:1337/${val.product_image}`} alt="shop" />
+                                                                <img src={`${MEDIA_BASE_URL}/${val.product_image}`} alt="shop" />
                                                                 <span className="sale">New</span>
                                                                 <ul className="shop-list">
                                                                    <li><Link to='/Shopgrid' onClick={() => addcart(val.product_id)} > <i className="fa-regular fa-cart-shopping"></i></Link></li>
@@ -254,7 +254,7 @@ function Shopgrid() {
                                             <div class="shop-item grid-shop" key={index}>
                                                 <div class="shop-thumb">
                                                     <div class="overlay"></div>
-                                                    <img src={`http://localhost:1337/${val1.product_image}`} alt="shop" />
+                                                    <img src={`${MEDIA_BASE_URL}/${val1.product_image}`} alt="shop" />
                                                     <span class="sale">New</span>
                                                     <ul class="shop-list">
                                                         <li><Link to="#"><i class="fa-regular fa-cart-shopping"></i></Link></li>

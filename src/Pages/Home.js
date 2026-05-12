@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Axois from 'axios'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
 
 
@@ -110,7 +110,7 @@ function Home() {
                                   borderRadius: "8px",}}>
                                             {/* <img src="assets/img/images/img10.jpg" alt="category"/> */}
                                             <img
-                                                src={`http://localhost:1337/${(val.category_image)}`}
+                                                src={`${MEDIA_BASE_URL}/${(val.category_image)}`}
                                                 alt={val.category_image}
                                                 />
                                         </div>

@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
 
 function Cart() {
@@ -174,7 +174,8 @@ function Cart() {
                                                     <td class="product-remove"><button onClick={() => handledelete(user.customer_id, val.product_id)}><i class="fa-sharp fa-regular fa-xmark"></i></button></td>
                                                     <td class="product-thumbnail">
                                                         <Link to="/Productdetails" state={{ product_id: val.product_id }}>
-                                                            <img src={`http://localhost:1337/${(val.product_image)}`} alt="img" />
+                                                            <img src={`${MEDIA_BASE_URL}/${(val.product_image)}`} alt="img" />
+                                                            
                                                         </Link>
                                                         <div class="product-thumbnail">
                                                             <h4 class="title">{val.product_name}</h4>

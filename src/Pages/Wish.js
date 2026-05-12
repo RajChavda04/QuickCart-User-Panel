@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Axios from 'axios'
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
 export default function Wish() {
 
@@ -148,7 +148,7 @@ export default function Wish() {
                                 <td class="product-remove"><button onClick={() => handledelete(user.customer_id, val.product_id)}><i class="fa-sharp fa-regular fa-xmark"></i></button></td>
                                 <td class="product-thumbnail">
                                     <a href="shop-details.html">
-                                        <img src={`http://localhost:1337/${(val.product_image)}`} alt="img"/>
+                                        <img src={`${MEDIA_BASE_URL}/${(val.product_image)}`} alt="img"/>
                                     </a>
                                     <div class="product-thumbnail">
                                         <span class="category" value={val.category_id}>{val.category_name}</span>

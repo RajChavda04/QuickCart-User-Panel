@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
 import Swal from 'sweetalert2'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
  function Checkout2() {
     const [list, setList] = useState([]);
@@ -447,7 +447,7 @@ import { API_BASE_URL } from '../config/apiConfig'
                                             list1.map((val, index) => (
                                         <div class="order-item" key={index}>
                                             <div class="order-left">
-                                                <div class="order-img"><img src={`http://localhost:1337/${val.product_image}`} alt="img" />
+                                                <div class="order-img"><img src={`${MEDIA_BASE_URL}/${val.product_image}`} alt="img" />
                                                 </div>
                                             </div>
                                             <div class="order-right">

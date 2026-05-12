@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
 function Productdetails() {
     const [list, setList] = useState([]);
@@ -225,7 +225,7 @@ function Productdetails() {
                                                     <div class="swiper-slide">
                                                         <div class="gallary-item">
                                                             <img
-                                                                src={`http://localhost:1337/${(val.product_image)}`}
+                                                                src={`${MEDIA_BASE_URL}/${(val.product_image)}`}
                                                                 alt="shop"
                                                             />
                                                             {/* <img src="assets/img/shop/shop-slider-3.jpg" alt="shop"/> */}

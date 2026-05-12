@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Axios from 'axios';
 import {Link} from 'react-router-dom'
-import { API_BASE_URL } from '../config/apiConfig'
+import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
 
 
 
@@ -89,7 +89,7 @@ function Cart() {
                                                     
                                                     <td class="product-thumbnail">
                                                         <a href="shop-details.html">
-                                                            <img src={`http://localhost:1337/${(val.product_image)}`} alt="img" />
+                                                            <img src={`${MEDIA_BASE_URL}/${(val.product_image)}`} alt="img" />
                                                         </a>
                                                         <div class="product-thumbnail">
                                                             <h4 class="title">{val.product_name}</h4>
