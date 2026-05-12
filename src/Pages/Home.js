@@ -46,9 +46,9 @@ function Home() {
             <section className="hero-section">
                 <div className="overlay"></div>
                 <div className="hero-images">
-                    <div className="hero-people"><img src="assets/img/images/Acer.jpg" alt="img" style={{ objectFit: 'cover', height: '100vh', width: '100vw' }} /></div>
-                    <div className="hero-shape"><img src="assets/img/shapes/hero-shape-1.png" alt="shape" /></div>
-                    <div className="hero-shape-2"><img src="assets/img/shapes/hero-shape-2.png" alt="shape" /></div>
+                    <div className="hero-people"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584577/Acer_nxjuvi.jpg" alt="img" style={{ objectFit: 'cover', height: '100vh', width: '100vw' }} /></div>
+                    {/* <div className="hero-shape"><img src="assets/img/shapes/hero-shape-1.png" alt="shape" /></div>
+                    <div className="hero-shape-2"><img src="assets/img/shapes/hero-shape-2.png" alt="shape" /></div> */}
                 </div>
                 <div className="container">
                     <div className="row">
@@ -160,7 +160,7 @@ function Home() {
                                         <li><a href="/Shope">ASRock</a></li>
                                         <li><a href="/Shope">Gigabyte</a></li>
                                     </ul>
-                                    <div className="men"><img src="assets/img/images/gp.png" alt="discount" /></div>
+                                    <div className="men"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584812/gp_aictxs.png" alt="discount" /></div>
                                 </div>
                                 <div className="collect-item item-2">
                                     <span>10+ Products</span>
@@ -171,7 +171,7 @@ function Home() {
                                         <li><a href="/Shope">Victus</a></li>
                                         <li><a href="/Shope">Samsung</a></li>
                                     </ul>
-                                    <div className="men"><img src="assets/img/images/lp.png" alt="discount" /></div>
+                                    <div className="men"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584855/lp_s4yqn5.png" alt="discount" /></div>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,7 @@ function Home() {
             </section>
 
 
-            <section className="cta-section pt-100 pb-100" data-background="assets/img/bg-img/bg1.jpg">
+            <section className="cta-section pt-100 pb-100" data-background="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584978/bg1_wdpwuu.jpg">
                 <div className="overlay"></div>
                 <div className="container">
                     <div className="cta-wrap text-center">
@@ -196,34 +196,34 @@ function Home() {
                 <div className="container">
                     <div className="row sponsor-wrap">
                         <div className="sponsor-item bd-right bd-bottom">
-                            <Link to="/"><img src="assets/img/sponsor/hp.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585418/hp_ycnp6z.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right bd-bottom">
-                            <Link to="/"><img src="assets/img/sponsor/lenovo.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585450/lenovo_ps7qfk.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right bd-bottom">
-                            <Link to="/"><img src="assets/img/sponsor/victus.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585476/victus_zoyqkb.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right bd-bottom">
-                            <Link to="/"><img src="assets/img/sponsor/dell.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585501/dell_nm4fx6.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-bottom">
-                            <Link to="/"><img src="assets/img/sponsor/asus.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585520/asus_rngfwc.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right">
-                            <Link to="/"><img src="assets/img/sponsor/intel.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585538/intel_xzgbqy.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right">
-                            <Link to="/"><img src="assets/img/sponsor/ryzen.png" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585561/ryzen_ddjtpb.png" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right">
-                            <Link to="/"><img src="assets/img/sponsor/nvidia.png" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585582/nvidia_quk4uz.png" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item bd-right">
-                            <Link to="/"><img src="assets/img/sponsor/sam.jpg" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585603/sam_zyzopv.jpg" alt="img" /></Link>
                         </div>
                         <div className="sponsor-item">
-                            <Link to="/"><img src="assets/img/sponsor/as.png" alt="img" /></Link>
+                            <Link to="/"><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585623/as_bt0rdw.png" alt="img" /></Link>
                         </div>
                     </div>
                 </div>

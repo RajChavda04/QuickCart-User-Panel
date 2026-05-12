@@ -49,9 +49,9 @@ const handleSearch = (e) => {
             <div className="header-middle-inner">
               <div className="header-middle-left">
                 <div className="header-logo d-lg-block">
-                  <a href="index.html">
-                    <img src="assets/img/logo/QuickCart.png" alt="Logo" />
-                  </a>
+                  <Link to="/">
+                    <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584413/quickcart_tthz07.png" alt="Logo" />
+                  </Link>
                 </div>
                 <div className="category-form-wrap">
 
