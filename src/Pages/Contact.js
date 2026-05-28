@@ -51,7 +51,7 @@ import React from 'react'
                         <div class="blog-contact-form form-2">
                             <div class="request-form">
                                 <h2 class="form-title">Get in Touch</h2>
-                                <form action="https://html.rrdevs.net/roiser/mail.php" method="post" id="ajax_contact" class="form-horizontal">
+                                <form action="" method="post" id="ajax_contact" class="form-horizontal">
                                     <div class="form-group row">
                                         <div class="col-md-6">
                                             <div class="form-item">

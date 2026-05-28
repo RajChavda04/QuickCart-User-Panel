@@ -20,15 +20,34 @@ function Cart() {
 
     useEffect(() => {
         if (!customerId) return;
-            Axios.post(`${API_BASE_URL}/showcart`, { customer_id: customerId })
-                .then((response) => {
-                    setList(response.data);
-                    calculateTotalPrice(response.data);
-                })
-                .catch((error) => {
-                    console.error("Error fetching Product data!", error);
-                });
+
+        Axios.post(`${API_BASE_URL}/showcart`, { customer_id: customerId })
+            .then((response) => {
+                setList(response.data);
+                calculateTotalPrice(response.data);
+                updateCartStorage(response.data);
+                localStorage.setItem(
+                    "cartItems",
+                    JSON.stringify(
+                        response.data.map(item => item.product_id)
+                    )
+                );
+            })
+            .catch((error) => {
+                console.error("Error fetching Product data!", error);
+            });
     }, [customerId]);
+
+    const updateCartStorage = (updatedCart) => {
+
+        localStorage.setItem(
+            "cartItems",
+            JSON.stringify(
+                updatedCart.map(item => item.product_id)
+            )
+        );
+    
+    };
     // Function to calculate total price
     const calculateTotalPrice = (products) => {
         let total = 0;
@@ -52,6 +71,7 @@ function Cart() {
         })
             .then(() => {
                 calculateTotalPrice(updatedList);
+                updateCartStorage(updatedList);
             })
             .catch((error) => {
                 console.error("Error updating quantity!", error);
@@ -73,6 +93,7 @@ function Cart() {
             })
                 .then(() => {
                     calculateTotalPrice(updatedList);
+                    updateCartStorage(updatedList);
                 })
                 .catch((error) => {
                     console.error("Error updating quantity!", error);
@@ -81,7 +102,7 @@ function Cart() {
     };
 
 
-    const handledelete = (customer_id,product_id) => {
+    const handledelete = (customer_id, product_id) => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -96,8 +117,14 @@ function Cart() {
                 Axios.delete(`${API_BASE_URL}/cart_product_delete/${customer_id}/${product_id}`)
                     .then((response) => {
 
-                        setList(prevList => prevList.filter(item => item.product_id !== product_id));
-    
+                        const updatedCart = list.filter( item => item.product_id !== product_id  );
+                        
+                        setList(updatedCart);
+                        
+                        calculateTotalPrice(updatedCart);
+                        
+                        updateCartStorage(updatedCart);
+
                         Swal.fire(
                             'Deleted!',
                             'Product has been removed from the cart.',
@@ -121,7 +148,7 @@ function Cart() {
             }
         });
     };
-    
+
 
     return (
         <>
@@ -175,7 +202,7 @@ function Cart() {
                                                     <td class="product-thumbnail">
                                                         <Link to="/Productdetails" state={{ product_id: val.product_id }}>
                                                             <img src={`${MEDIA_BASE_URL}/${(val.product_image)}`} alt="img" />
-                                                            
+
                                                         </Link>
                                                         <div class="product-thumbnail">
                                                             <h4 class="title">{val.product_name}</h4>
@@ -184,18 +211,17 @@ function Cart() {
                                                     <td class="product-price"><span class="amount">{val.product_price}</span></td>
                                                     <td class="product-quantity">
                                                         {/* <div class="groupmy"> */}
-                                                            <button class="my1" onClick={() => decreaseQuantity(val.product_id, index)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8" />
-                                                            </svg></button>
-                                                            
-                                                            <input type="text" class="mytext1" name="quantity" value={val.product_quantity} readOnly />
-                                                            <button class="my1" onClick={() => increaseQuantity(val.product_id, index)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
-                                                            </svg></button>
+                                                        <button class="my1" onClick={() => decreaseQuantity(val.product_id, index)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8" />
+                                                        </svg></button>
+
+                                                        <input type="text" class="mytext1" name="quantity" value={val.product_quantity} readOnly />
+                                                        <button class="my1" onClick={() => increaseQuantity(val.product_id, index)}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                                        </svg></button>
                                                         {/* </div> */}
                                                     </td>
                                                     <td class="product-subtotal"><span class="amount">₹{val.product_price * val.product_quantity}</span></td>
-
                                                 </tr>
                                             ))
                                         ) : (
@@ -206,31 +232,28 @@ function Cart() {
                                     </tbody>
                                 </table>
                             </div>
-
-                          
                         </div>
 
                         <div class="col-lg-4">
-
                             <div class="checkout-wrapper">
                                 <div class="checkout-top checkout-item item-1">
                                     <h4 class="title">Cart Totals</h4>
                                 </div>
-                                
 
                                 <div class="checkout-total checkout-item">
                                     <h4 class="title">Sub Total</h4>
                                     <span>₹{totalPrice}</span>
                                 </div>
-
-
-
                             </div>
-                            <div class="checkout-proceed">
-                                <Link to="/Checkout2"  class="rr-primary-btn checkout-btn">Proceed to Checkout</Link>
+                            <div className="checkout-proceed">
+                                {list.length > 0 ? (
+                                    <Link to="/Checkout2" className="rr-primary-btn checkout-btn" >  Proceed to Checkout </Link>
+                                ) : (
+                                    <button disabled className="rr-primary-btn cursor-not-allowed  checkout-btn opacity-50 " >
+                                        Proceed to Checkout
+                                    </button>)}
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>

@@ -248,7 +248,7 @@ import React from 'react'
                                     </div>
                                     <div class="blog-contact-form form-2 review-form">
                                         <div class="request-form">
-                                            <form action="https://html.rrdevs.net/roiser/contact.php" method="post" id="ajax_contact" class="form-horizontal">
+                                            <form action="" method="post" id="ajax_contact" class="form-horizontal">
                                                 <div class="form-group row">
                                                     <div class="col-md-12">
                                                         <div class="form-item">

@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-     <div className="footer-section bg-grey pt-60">
+     <div className="footer-section bg-gray-100 pt-20">
                 <div className="container">
                     <div className="footer-items">
                         <div className="footer-item">
@@ -51,7 +51,7 @@ const Footer = () => {
                                 <div className="col-lg-6">
                                     <div className="footer-img-wrap">
                                         <span>Payment System:</span>
-                                        <div className="footer-img"><a href="a"><img src="assets/img/images/footer-img-1.png" alt="img"/></a></div>
+                                        <div className="footer-img"><img src="assets/img/images/footer-img-1.png" alt="img"/></div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

@@ -12,15 +12,20 @@ export default function Wish() {
     const customerId = user?.customer_id;
 
 
+    const fetchWishlist = () => {
+        Axios.post(`${API_BASE_URL}/showwish`, { customer_id: customerId })
+            .then((response) => {
+                setList(response.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching Product data!", error);
+            });
+    };
+    
     useEffect(() => {
         if (!customerId) return;
-            Axios.post(`${API_BASE_URL}/showwish`, { customer_id: customerId })
-                .then((response) => {
-                    setList(response.data);
-                })
-                .catch((error) => {
-                    console.error("Error fetching Product data!", error);
-                });
+    
+        fetchWishlist();
     }, [customerId]);
 
     const addcart = (product_id) => {
@@ -47,7 +52,7 @@ export default function Wish() {
                             cartItems.push(product_id);
                             localStorage.setItem('cartItems', JSON.stringify(cartItems));
                         }
-    
+                        fetchWishlist();
                         // Show success alert
                         Swal.fire({
                             icon: 'success',

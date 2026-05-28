@@ -13,7 +13,7 @@ function Navbar() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-const handleSearch = (e) => {
+  const handleSearch = (e) => {
     if (e.key === "Enter" && query.trim() !== "") {
       navigate(`/Search?query=${encodeURIComponent(query.trim())}`);
       setQuery(""); // optional: clear after search
@@ -56,15 +56,15 @@ const handleSearch = (e) => {
                 <div className="category-form-wrap">
 
                   <div className="header-form" >
-                    <input className="form-control" type="text" name="search"  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  onKeyDown={handleSearch} placeholder="Search here..." />
+                    <input className="form-control" type="text" name="search" value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                      onKeyDown={handleSearch} placeholder="Search here..." />
                     <button className="submit rr-primary-btn">Search here</button>
                   </div>
                 </div>
               </div>
               <div className="header-middle-right">
-             
+
                 <ul className="contact-item-list">
 
                   <li>
@@ -73,47 +73,50 @@ const handleSearch = (e) => {
                     </Link>
                   </li>
                   <li>
-                 
+
                     <Link to="/Cart" className="icon" >
                       <i className="fa-light fa-bag-shopping"></i>
                       <span>2</span>
                     </Link>
-                       
+
                   </li>
                   <li>
-                 
+
                     <Link to="/Order" className="icon" >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-seam" viewBox="0 0 16 16">
-                    <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
-                  </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-seam" viewBox="0 0 16 16">
+                        <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+                      </svg>
                     </Link>
-                       
+
                   </li>
 
                   <li>
-                 
+
                     <Link to="/Userprofile" className="icon"  >
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                         <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                       </svg>
                     </Link>
-               
+
                   </li>
 
                 </ul>
-           
+
               </div>
             </div>
           </div>
         </div>
+
+
+
         <div className="primary-header">
           <div className="container">
             <div className="primary-header-inner">
               <div className="header-logo mobile-logo">
-                <a href="index.html">
-                  <img src="assets/img/logo/logo-1.png" alt="Logo" />
-                </a>
+                <Link href="/">
+                  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584413/quickcart_tthz07.png" alt="Logo" />
+                </Link>
               </div>
               <div className="header-menu-wrap">
                 <div className="mobile-menu-items">
@@ -127,7 +130,7 @@ const handleSearch = (e) => {
 
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="/">Category</a>
+                      <Link >Category</Link>
 
                       <ul>
                         {list.map((val, index) => (
@@ -139,16 +142,13 @@ const handleSearch = (e) => {
                     </li>
 
                     <li className="menu-item-has-children">
-                      <a href="/">Pages</a>
+                      <Link href="/">Pages</Link>
                       <ul>
                         {/* <li><Link to="about.html">About</Link></li> */}
                         <li><Link to="/Login">Login</Link></li>
                         <li><Link to="/Register">Register</Link></li>
-
-
                       </ul>
                     </li>
-
                     {/* <li><a href="/Contact">Contact</a></li> */}
                   </ul>
                 </div>
@@ -172,7 +172,7 @@ const handleSearch = (e) => {
       <div id="popup-search-box">
         <div className="box-inner-wrap d-flex align-items-center">
           <form id="form" action="#" method="get" role="search">
-            <input id="popup-search" type="text" name="search"  placeholder="Type keywords here..." />
+            <input id="popup-search" type="text" name="search" placeholder="Type keywords here..." />
           </form>
           <div className="search-close"><i className="fa-sharp fa-regular fa-xmark"></i></div>
         </div>
@@ -180,14 +180,14 @@ const handleSearch = (e) => {
       <div className="mobile-side-menu">
         <div className="side-menu-content">
           <div className="side-menu-head">
-            <a href='index.html'><img src="assets/img/logo/logo-1.png" alt="logo" /></a>
+            <Link href='/'><img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584413/quickcart_tthz07.png" alt="logo" /></Link>
             <button className="mobile-side-menu-close"><i className="fa-regular fa-xmark"></i></button>
           </div>
           <div className="side-menu-wrap"></div>
           <ul className="side-menu-list">
-            <li><i className="fa-light fa-location-dot"></i>Address : <span>Amsterdam, 109-74</span></li>
-            <li><i className="fa-light fa-phone"></i>Phone : <a href="tel:+01569896654">+01 569 896 654</a></li>
-            <li><i className="fa-light fa-envelope"></i>Email : <a href="mailto:info@example.com">info@example.com</a>
+            <li><i className="fa-light fa-location-dot"></i>Address : <span>Gujarat, India</span></li>
+            <li><i className="fa-light fa-phone"></i>Phone : <a href="tel:+919000011111">+91 90000 11111</a></li>
+            <li><i className="fa-light fa-envelope"></i>Email : <a href="mailto:quickcart0411@gmail.com">quickcart0411@gmail.com</a>
             </li>
           </ul>
         </div>

@@ -131,7 +131,7 @@ function Userprofile() {
                                     ))
                                 ) : (
                                     <div className="col-12 text-center">
-                                        <h2>No products available.</h2>
+                                        <h2>Login first to view your profile</h2>
                                     </div>
                                 )}
 

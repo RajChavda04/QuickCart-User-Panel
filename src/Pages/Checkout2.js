@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import Axios from 'axios';
 import Swal from 'sweetalert2'
 import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
@@ -17,7 +18,7 @@ import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
     const [selectedState, setSelectedState] = useState('');
     const [states, setStates] = useState([]);
     const [cities, setCities] = useState([]);
-    
+    const Navigate = useNavigate();
 
 
 
@@ -89,6 +90,7 @@ import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
         }
 
     }
+
     useEffect(() => {
         if (!customerId) return;
             Axios.post(`${API_BASE_URL}/usercheckout`, { customer_id: customerId })
@@ -238,17 +240,17 @@ import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
                             title: 'Payment Successful',
                             text: res.data.message,
                         })
-                        // Navigate(`/Invoice/${res.data.order_no}`);
-
+                        localStorage.removeItem("cartItems");
+                        setTimeout(() => {  Navigate("/Order");  }, 2000);
                     })
                     .catch((error) => {
                         alert("Payment successfully, but there was an error processing the order")
                     })
 
-                // console.log(response);
+               
             },
             prefill: {
-                name: 'Raj Chavda',
+                name: 'Raj',
                 email: process.env.REACT_APP_RAZORPAY_EMAIL,
                 contact: process.env.REACT_APP_RAZORPAY_CONTACT,
             },
@@ -290,6 +292,8 @@ import { API_BASE_URL, MEDIA_BASE_URL } from '../config/apiConfig'
                     title: 'Order Placed Successfully',
                     text: res.data.message,
                 });
+            localStorage.removeItem("cartItems");
+             setTimeout(() => {  Navigate("/Order");  }, 2000);
             })
             .catch((error) => {
                 Swal.fire({
