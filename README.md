@@ -252,9 +252,7 @@ Opens at: **http://localhost:3000**
 
 ### Home Page
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780036805/home_uec052.png" alt="Home Page" width="900"/>
-</p>
+![Home](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780036805/home_uec052.png)
 
 ### Shop / Categories
 
