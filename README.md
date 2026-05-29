@@ -274,6 +274,10 @@ Opens at: **http://localhost:3000**
 
 ![Checkout](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/checkout_f8mefl.png)
 
+### Payment
+
+![Payment](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/pay_fedzoy.png)
+
 ### My Orders
 
 ![Orders](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/orderdetail_yywdy2.png)
@@ -292,7 +296,7 @@ Opens at: **http://localhost:3000**
 
 ### User Profile
 
-![User Profile](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/register_xqywmq.png)
+![User Profile](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/profile_zr2ft6.png)
 
 ---
 
