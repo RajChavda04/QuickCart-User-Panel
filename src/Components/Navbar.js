@@ -158,7 +158,7 @@ function Navbar() {
                 <div className="header-right">
                   <span>Get 40% Discount Now <span>Sale</span></span>
                   <div className="header-right-item">
-                    <a href="javascript:void(0)" className="mobile-side-menu-toggle"><i className="fa-sharp fa-solid fa-bars"></i></a>
+                  <button type="button" className="mobile-side-menu-toggle"> <i className="fa-sharp fa-solid fa-bars"></i></button>
                   </div>
                 </div>
 

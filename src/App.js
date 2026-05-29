@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter,Routes,Route,Navigate } from 'react-router-dom';
+import {useEffect} from "react"
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Footer from './Components/Footer';
@@ -10,7 +11,6 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import Shope from './Pages/Shope';
 import Shopgrid from './Pages/Shopgrid';
-import Contact from './Pages/Contact';
 import Wish from './Pages/Wish';
 import Userprofile from './Pages/Userprofile';
 import Productdetails from './Pages/Productdetails';
@@ -24,18 +24,31 @@ import Changepass from './Pages/Changepass';
 import {PublicRoute,CheckoutRoute, ProtectedRoute } from './utils/PublicRoute';
 
 
-
-
-
-
 function App() {
+
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant" 
+      });
+    }, [pathname]);
+  
+    return null;
+  };
+
   return (
 
-    
     <BrowserRouter>
+    <ScrollToTop/>
     <MainContent/>
     </BrowserRouter>
-   
+  
   );
 }
 function MainContent(){
@@ -45,12 +58,13 @@ function MainContent(){
   const isCompanyReg2 = location.pathname === "/Forgot" ;
   const isCompanyReg3 = location.pathname === "/Invoice" ;
   const isCompanyReg4 = location.pathname === "/Changepass" ;
+
  
 
   return(
      <>
      {!isCompanyReg && !isCompanyReg1 && !isCompanyReg2 && !isCompanyReg3 && !isCompanyReg4 && ( <Navbar/> )}
-     
+ 
    <Routes>
 
    <Route path="/Login" element={<PublicRoute><Login /></PublicRoute> }/>
@@ -60,7 +74,6 @@ function MainContent(){
    <Route path="/Cart" element={<Cart></Cart>}></Route>
    <Route path="/Shope" element={<Shope></Shope>}></Route>
    <Route path="/Shopgrid" element={<Shopgrid></Shopgrid>}></Route>
-   <Route path="/Contact" element={<Contact></Contact>}></Route>
    <Route path="/Wish" element={<Wish></Wish>}></Route>
    <Route path="/Userprofile" element={<Userprofile></Userprofile>}></Route>
    <Route path="/Productdetails" element={<Productdetails></Productdetails>}></Route>

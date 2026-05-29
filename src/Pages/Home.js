@@ -264,7 +264,7 @@ function Home() {
 
                                 </ul>
 
-                                <div className="men absolute bottom-0 right-0 w-[100px] sm:w-[130px] lg:w-[160px]">
+                                <div className="men absolute bottom-0 right-0 w-[100px] sm:w-[130px] lg:w-[500px]">
                                     <img
                                         src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584812/gp_aictxs.png"
                                         alt="discount"
@@ -278,31 +278,21 @@ function Home() {
                             <div className="collect-item item-2 relative overflow-hidden rounded-2xl p-5 sm:p-6 lg:p-6 min-h-[220px] sm:min-h-[250px] lg:min-h-[240px]">
 
                                 <span className="text-base sm:text-base">10+ Products</span>
-
-                                <h3 className="title text-2xl sm:text-3xl lg:text-3xl mt-2">
-                                    Best Laptop
-                                </h3>
-
+                                <h3 className="title text-2xl sm:text-3xl lg:text-3xl mt-2"> Best Laptop </h3>
                                 <ul className="collect-list mt-3 space-y-2">
-
                                     <li><Link to="/Shope" className="text-sm sm:text-base lg:text-base">HP</Link></li>
-
                                     <li><Link to="/Shope" className="text-sm sm:text-base lg:text-base">Lenovo</Link></li>
-
                                     <li><Link to="/Shope" className="text-sm sm:text-base lg:text-base">Victus</Link></li>
-
                                     <li><Link to="/Shope" className="text-sm sm:text-base lg:text-base">Samsung</Link></li>
-
                                 </ul>
-
-                                <div className="men absolute bottom-0 right-0 w-[100px] sm:w-[130px] lg:w-[160px]">
+                                
+                                <div className="men absolute bottom-0 right-0 w-[100px] sm:w-[130px] lg:w-[500px]">
                                     <img
                                         src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584855/lp_s4yqn5.png"
                                         alt="discount"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
-
                             </div>
 
                         </div>
@@ -439,7 +429,7 @@ function Home() {
             </div>
 
 
-            <section className="deal-section pt-20 ">
+            <section className="deal-section pt-20 pb-4 ">
                 <div className="container">
                     <div className="row deal-wrap align-items-center">
                         <div className="shape"><img src="assets/img/shapes/deal-shape.png" alt="shape" /></div>

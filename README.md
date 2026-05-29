@@ -248,84 +248,51 @@ Opens at: **http://localhost:3000**
 
 ## Screenshots
 
-> Images hosted on Cloudinary. If preview is blank in Cursor/VS Code, see [Preview not showing?](#preview-not-showing) below.
+> Screenshots hosted on Cloudinary.
 
 ### Home Page
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780036805/home_uec052.png" alt="Home Page" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Home Page](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780036805/home_uec052.png)
 
 ### Shop / Categories
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037359/shop_dvmb19.png" alt="Shop" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Shop](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037359/shop_dvmb19.png)
 
 ### Product Details
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/productdetail_igcof0.png" alt="Product Details" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Product Details](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/productdetail_igcof0.png)
 
 ### Shopping Cart
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037186/cart_nqcf5i.png" alt="Cart" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Cart](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/cart_nqcf5i.png)
 
 ### Wishlist
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037414/wish_tpbw1r.png" alt="Wishlist" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Wishlist](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037414/wish_tpbw1r.png)
 
 ### Checkout
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037186/checkout_f8mefl.png" alt="Checkout" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Checkout](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/checkout_f8mefl.png)
 
 ### My Orders
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/orderdetail_yywdy2.png" alt="Orders" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Orders](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/orderdetail_yywdy2.png)
 
 ### Invoice
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037549/invoice_xainyw.png" alt="Invoice" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Invoice](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037549/invoice_xainyw.png)
 
-### Login & Register
+### Login
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037186/login_b2hhyo.png" alt="Login" width="550" style="max-width:100%; height:auto;"/>
-</p>
+![Login](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/login_b2hhyo.png)
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/register_xqywmq.png" alt="Register" width="550" style="max-width:100%; height:auto;"/>
-</p>
+### Register
+
+![Register](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/register_xqywmq.png)
 
 ### User Profile
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/register_xqywmq.png" alt="User Profile" width="550" style="max-width:100%; height:auto;"/>
-</p>
-
-> Replace the Profile image URL above when you upload a dedicated profile screenshot to Cloudinary.
-
-### Preview not showing?
-
-Your Cloudinary links are valid. If images do not appear in **Cursor / VS Code** markdown preview:
-
-1. Open **Settings** (`Ctrl + ,`) → search `markdown.preview.security`
-2. Set **Markdown › Preview: Security Level** to `disabled`
-3. Close and reopen the preview (`Ctrl + Shift + V`)
-
-Or push to GitHub — images will show on the repo README page in the browser.
-
+![User Profile](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/register_xqywmq.png)
 
 ---
 
