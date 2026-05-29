@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route,Navigate } from 'react-router-dom';
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Footer from './Components/Footer';
@@ -21,7 +21,7 @@ import Forgot from './Pages/Forgot'
 import Invoice from './Pages/Invoice'
 import Search from './Pages/Search';
 import Changepass from './Pages/Changepass';
-import {PublicRoute,CheckoutRoute } from './utils/PublicRoute';
+import {PublicRoute,CheckoutRoute, ProtectedRoute } from './utils/PublicRoute';
 
 
 
@@ -55,7 +55,7 @@ function MainContent(){
 
    <Route path="/Login" element={<PublicRoute><Login /></PublicRoute> }/>
    <Route  path="/Register" element={ <PublicRoute><Register /></PublicRoute> }/>
-   <Route path="/" element={<Home></Home>}></Route>
+   <Route path="/" element={<Home/>}></Route>
    <Route path="/Product" element={<Product></Product>}></Route>
    <Route path="/Cart" element={<Cart></Cart>}></Route>
    <Route path="/Shope" element={<Shope></Shope>}></Route>
@@ -64,15 +64,15 @@ function MainContent(){
    <Route path="/Wish" element={<Wish></Wish>}></Route>
    <Route path="/Userprofile" element={<Userprofile></Userprofile>}></Route>
    <Route path="/Productdetails" element={<Productdetails></Productdetails>}></Route>
-   <Route path="/Update" element={<Update></Update>}></Route>
+   <Route path="/Update" element={<ProtectedRoute><Update/></ProtectedRoute>}></Route>
    <Route path="/Checkout2" element={<CheckoutRoute><Checkout2/></CheckoutRoute>}></Route>
    <Route path="/Order" element={<Order></Order>}></Route>
-   <Route path="/Forgot" element={<Forgot></Forgot>}></Route>
-   <Route path="/Invoice" element={<Invoice></Invoice>}></Route>
+   <Route path="/Forgot" element={<PublicRoute><Forgot></Forgot></PublicRoute>}></Route>
+   <Route path="/Invoice" element={<ProtectedRoute><Invoice/></ProtectedRoute>}></Route>
    <Route path="/Search" element={<Search></Search>}></Route>
-   <Route path="/Changepass" element={<Changepass></Changepass>}></Route>
+   <Route path="/Changepass" element={<ProtectedRoute><Changepass/></ProtectedRoute>}></Route>
  
-    
+   <Route path="*" element={  sessionStorage.getItem("mydata") ? <Navigate to="/" replace /> : <Navigate to="/Login" replace /> } />
    </Routes>
   {!isCompanyReg && ! isCompanyReg1 && !isCompanyReg2 && !isCompanyReg3 && !isCompanyReg4 && <Footer/>}
    </>

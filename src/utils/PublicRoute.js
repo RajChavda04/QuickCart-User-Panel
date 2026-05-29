@@ -1,13 +1,17 @@
 import { Navigate } from "react-router-dom";
 
-export const PublicRoute = ({ children }) => {
-
+export const ProtectedRoute = ({ children }) => {
   const user = sessionStorage.getItem("mydata");
 
-  if (user) { return <Navigate to="/" replace />;}
-
-  return children;
+  return user ? children : <Navigate to="/Login" replace />;
 };
+
+export const PublicRoute = ({ children }) => {
+  const user = sessionStorage.getItem("mydata");
+
+  return user ? <Navigate to="/" replace /> : children;
+};
+
 
 export  const CheckoutRoute =({ children })=> {
 
@@ -26,4 +30,3 @@ export  const CheckoutRoute =({ children })=> {
   return children;
 }
 
-export default PublicRoute;
