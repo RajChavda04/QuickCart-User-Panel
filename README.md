@@ -252,64 +252,66 @@ Opens at: **http://localhost:3000**
 
 ### Home Page
 
-![Home](https://res.cloudinary.com/dmuedtbcs/image/upload/v1780036805/home_uec052.png)
+<p align="center">
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780036805/home_uec052.png" alt="Home Page" width="550" style="max-width:100%; height:auto;"/>
+</p>
 
 ### Shop / Categories
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037359/shop_dvmb19.png" alt="Shop" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037359/shop_dvmb19.png" alt="Shop" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### Product Details
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/productdetail_igcof0.png" alt="Product Details" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/productdetail_igcof0.png" alt="Product Details" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### Shopping Cart
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/cart_nqcf5i.png" alt="Cart" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037186/cart_nqcf5i.png" alt="Cart" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### Wishlist
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037414/wish_tpbw1r.png" alt="Wishlist" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037414/wish_tpbw1r.png" alt="Wishlist" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### Checkout
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/checkout_f8mefl.png" alt="Checkout" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037186/checkout_f8mefl.png" alt="Checkout" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### My Orders
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/orderdetail_yywdy2.png" alt="Orders" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/orderdetail_yywdy2.png" alt="Orders" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### Invoice
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037549/invoice_xainyw.png" alt="Invoice" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037549/invoice_xainyw.png" alt="Invoice" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### Login & Register
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037186/login_b2hhyo.png" alt="Login" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037186/login_b2hhyo.png" alt="Login" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/register_xqywmq.png" alt="Register" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/register_xqywmq.png" alt="Register" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 ### User Profile
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1780037187/register_xqywmq.png" alt="User Profile" width="900"/>
+  <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/w_550,q_auto,f_auto/v1780037187/register_xqywmq.png" alt="User Profile" width="550" style="max-width:100%; height:auto;"/>
 </p>
 
 > Replace the Profile image URL above when you upload a dedicated profile screenshot to Cloudinary.
