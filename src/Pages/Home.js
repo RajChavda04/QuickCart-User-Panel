@@ -285,7 +285,7 @@ function Home() {
                                     <li><Link to="/Shope" className="text-sm sm:text-base lg:text-base">Victus</Link></li>
                                     <li><Link to="/Shope" className="text-sm sm:text-base lg:text-base">Samsung</Link></li>
                                 </ul>
-                                
+
                                 <div className="men absolute bottom-0 right-0 w-[100px] sm:w-[130px] lg:w-[500px]">
                                     <img
                                         src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778584855/lp_s4yqn5.png"
@@ -315,109 +315,68 @@ function Home() {
                 </div>
             </section>
 
+            <div className="sponsor-section pt-10 sm:pt-12 lg:pt-16">
 
-            <div className="sponsor-section pt-10 sm:pt-14 lg:pt-24">
+                <div className="container px-4 sm:px-6 lg:px-20">
 
-                <div className="container px-8 sm:px-6 lg:px-20">
+                    <div className="row sponsor-wrap grid grid-cols-3 max-w-[800px] sm:max-w-[1000px] mx-auto">
 
-                    <div className="row sponsor-wrap grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-
-                        <div className="sponsor-item bd-right bd-bottom flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
+                        <div className="sponsor-item bd-right bd-bottom flex items-center justify-center p-4 sm:p-6 !h-[120px] sm:!h-[160px]">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585418/hp_ycnp6z.jpg"
                                     alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
+                                    className="!w-[90px] sm:!w-[130px] !h-auto !max-w-[90px] sm:!max-w-[130px] object-contain"
                                 />
                             </Link>
                         </div>
 
-                        <div className="sponsor-item bd-right bd-bottom flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
+                        <div className="sponsor-item bd-right bd-bottom flex items-center justify-center p-4 sm:p-6 !h-[120px] sm:!h-[160px]">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585450/lenovo_ps7qfk.jpg"
                                     alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
+                                    className="!w-[90px] sm:!w-[130px] !h-auto !max-w-[90px] sm:!max-w-[130px] object-contain"
                                 />
                             </Link>
                         </div>
 
-                        <div className="sponsor-item bd-right bd-bottom flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
+                        <div className="sponsor-item bd-bottom flex items-center justify-center p-4 sm:p-6 !h-[120px] sm:!h-[160px]">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585476/victus_zoyqkb.jpg"
                                     alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
+                                    className="!w-[90px] sm:!w-[130px] !h-auto !max-w-[90px] sm:!max-w-[130px] object-contain"
                                 />
                             </Link>
                         </div>
 
-                        <div className="sponsor-item bd-right bd-bottom flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
+                        <div className="sponsor-item bd-right flex items-center justify-center p-4 sm:p-6 !h-[120px] sm:!h-[160px]">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585501/dell_nm4fx6.jpg"
                                     alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
+                                    className="!w-[90px] sm:!w-[130px] !h-auto !max-w-[90px] sm:!max-w-[130px] object-contain"
                                 />
                             </Link>
                         </div>
 
-                        <div className="sponsor-item bd-bottom flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
+                        <div className="sponsor-item bd-right flex items-center justify-center p-4 sm:p-6 !h-[120px] sm:!h-[160px]">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585520/asus_rngfwc.jpg"
                                     alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
+                                    className="!w-[90px] sm:!w-[130px] !h-auto !max-w-[90px] sm:!max-w-[130px] object-contain"
                                 />
                             </Link>
                         </div>
 
-                        <div className="sponsor-item bd-right flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
+                        <div className="sponsor-item flex items-center justify-center p-4 sm:p-6 !h-[120px] sm:!h-[160px]">
                             <Link to="/">
                                 <img
                                     src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585538/intel_xzgbqy.jpg"
                                     alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
-                                />
-                            </Link>
-                        </div>
-
-                        <div className="sponsor-item bd-right flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
-                            <Link to="/">
-                                <img
-                                    src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585561/ryzen_ddjtpb.png"
-                                    alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
-                                />
-                            </Link>
-                        </div>
-
-                        <div className="sponsor-item bd-right flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
-                            <Link to="/">
-                                <img
-                                    src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585582/nvidia_quk4uz.png"
-                                    alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
-                                />
-                            </Link>
-                        </div>
-
-                        <div className="sponsor-item bd-right flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
-                            <Link to="/">
-                                <img
-                                    src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585603/sam_zyzopv.jpg"
-                                    alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
-                                />
-                            </Link>
-                        </div>
-
-                        <div className="sponsor-item flex items-center justify-center p-4 sm:p-6 min-h-[110px] sm:min-h-[140px]">
-                            <Link to="/">
-                                <img
-                                    src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1778585623/as_bt0rdw.png"
-                                    alt="img"
-                                    className="w-[50px] sm:w-60px] lg:w-[80px] object-contain"
+                                    className="!w-[90px] sm:!w-[130px] !h-auto !max-w-[90px] sm:!max-w-[130px] object-contain"
                                 />
                             </Link>
                         </div>
@@ -427,8 +386,6 @@ function Home() {
                 </div>
 
             </div>
-
-
             <section className="deal-section pt-20 pb-4 ">
                 <div className="container">
                     <div className="row deal-wrap align-items-center">
@@ -459,7 +416,7 @@ function Home() {
                                                 <div className="overlay"></div>
                                                 <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1779965932/lenovo1_wcdavm.jpg" alt="shop" />
                                                 <span className="sale">New</span>
-                                  
+
                                             </div>
                                             <div className="shop-content">
                                                 <span className="category">Laptop</span>
@@ -486,7 +443,7 @@ function Home() {
                                                 <div className="overlay"></div>
                                                 <img src="https://res.cloudinary.com/dmuedtbcs/image/upload/v1779967099/1741444503198-dell1_lmrmox.jpg" alt="shop" />
                                                 <span className="sale">New</span>
-                
+
                                             </div>
                                             <div className="shop-content">
                                                 <span className="category">Laptop</span>

@@ -57,42 +57,58 @@ import { API_BASE_URL } from '../config/apiConfig'
 
 
    }
-  return (
+return (
     <>
-       <div class="login-area pt-100 pb-100">
-                <div class="logcontainer">
+        <div className="login-area pt-16 pb-16">
+            <div className="logcontainer mx-auto px-4">
+                <div className="login-wrap text-center max-w-md mx-auto">
 
-                    <div class="login-wrap text-center">
+                    <h3 className="title text-2xl font-semibold text-gray-800 mb-6">Change Password</h3>
 
-                        <h3 class="title">Change Password</h3>
-                        
-                        <div class="login-form">
-                            <div class="form-item">
-                                <h4 class="form-header">Current Password</h4>
-                                <input type="password" id="current_password" name="current_password" class="form-control" placeholder="" />
-                            </div>
-                            <div class="form-item">
-                                <h4 class="form-header">New Password*</h4>
-                                <input type="password" id="new_password" name="new_password" class="form-control" placeholder="" />
-                            </div>
-                            <div class="form-item">
-                                <h4 class="form-header">Confirm Password*</h4>
-                                <input type="password" id="con_password" name="con_password" class="form-control" placeholder="" />
-                            </div>
-    
-                           
-                            <div class="submit-btn">
-                            
-                                <button class="rr-primary-btn" onClick={changepass} >Submit</button>
-                         
-                            </div>
-                             
-                            
+                    <div className="login-form rounded-lg border border-gray-100 shadow-sm p-4 sm:p-6">
+                        <div className="text-left mb-4">
+                            <h4 className="text-base font-medium text-gray-700 mb-1">Current Password</h4>
+                            <input
+                                type="password"
+                                id="current_password"
+                                name="current_password"
+                                className="w-full text-base border border-gray-200 rounded-md px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-gray-300"
+                            />
+                        </div>
+
+                        <div className="text-left mb-4">
+                            <h4 className="text-base font-medium text-gray-700 mb-1">New Password*</h4>
+                            <input
+                                type="password"
+                                id="new_password"
+                                name="new_password"
+                                className="w-full text-base border border-gray-200 rounded-md px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-gray-300"
+                            />
+                        </div>
+
+                        <div className="text-left mb-6">
+                            <h4 className="text-base font-medium text-gray-700 mb-1">Confirm Password*</h4>
+                            <input
+                                type="password"
+                                id="con_password"
+                                name="con_password"
+                                className="w-full text-base border border-gray-200 rounded-md px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-gray-300"
+                            />
+                        </div>
+
+                        <div className="submit-btn">
+                            <button
+                                className="rr-primary-btn w-full rounded-md bg-red-500 hover:bg-red-600 text-white py-3 text-base font-semibold transition"
+                                onClick={changepass}
+                            >
+                                Submit
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </>
-  )
+)
 }
 export default Changepass

@@ -57,13 +57,13 @@ function MainContent(){
   const isCompanyReg1 = location.pathname === "/Register" ;
   const isCompanyReg2 = location.pathname === "/Forgot" ;
   const isCompanyReg3 = location.pathname === "/Invoice" ;
-  const isCompanyReg4 = location.pathname === "/Changepass" ;
+  // const isCompanyReg4 = location.pathname === "/Changepass" ;
 
  
 
   return(
      <>
-     {!isCompanyReg && !isCompanyReg1 && !isCompanyReg2 && !isCompanyReg3 && !isCompanyReg4 && ( <Navbar/> )}
+     {!isCompanyReg && !isCompanyReg1 && !isCompanyReg2 && !isCompanyReg3  && ( <Navbar/> )}
  
    <Routes>
 
@@ -87,7 +87,7 @@ function MainContent(){
  
    <Route path="*" element={  sessionStorage.getItem("mydata") ? <Navigate to="/" replace /> : <Navigate to="/Login" replace /> } />
    </Routes>
-  {!isCompanyReg && ! isCompanyReg1 && !isCompanyReg2 && !isCompanyReg3 && !isCompanyReg4 && <Footer/>}
+  {!isCompanyReg && ! isCompanyReg1 && !isCompanyReg2 && !isCompanyReg3 && <Footer/>}
    </>
   );
 }
